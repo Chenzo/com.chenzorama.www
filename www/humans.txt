@@ -1,0 +1,12 @@
+/* TEAM */
+Chenzorama.com
+
+Lead Chenzo: Vince Suriani
+Twitter: @1Chenzo
+
+
+/* SITE */
+Last update: 05.01.2016
+Standards: HTML5, CSS3
+Components: jQuery
+Software: Photoshop, Gulp, Node, Bitbucket, Git, Sublime Text

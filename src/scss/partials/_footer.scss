@@ -1,0 +1,54 @@
+footer {
+    background-color: $clr_tertiary;
+    height: 55px;
+    width: 100%;
+	position: relative;
+	border-top: 1px solid $clr_primary;
+
+	section {
+		position: relative;
+		display: block;
+
+		.lefty {
+			position: absolute;
+			top: -6px;
+			left: 6px;
+
+			a.sprt_gaming {
+				height: 54px;
+		    	width: 55px;
+				display: inline-block;
+				text-indent: -9999px;
+				@include cramaSprite(-60px, -5px);
+			}
+		}
+
+		.right_icons {
+
+			position: absolute;
+			top: -6px;
+			right: 6px;
+
+			a {
+				height: 54px;
+		    	width: 54px;
+				display: inline-block;
+				text-indent: -9999px;
+
+				&.sprt_github {
+		    		@include cramaSprite(-3px, -5px);
+		    	}
+
+		    	&.sprt_linkedin {
+		    		@include cramaSprite(-119px, -5px);
+		    	}
+
+		    	&.sprt_twitter {
+		    		@include cramaSprite(-180px, -5px);
+		    	}
+			}
+
+	    } //.right_icons
+
+    } // section.
+}

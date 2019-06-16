@@ -1,0 +1,283 @@
+.home {
+	
+	position: relative;
+
+	&.stuck {
+		padding-top: 50px;
+	}
+
+	.minvh {
+		/* min-height: 80vh; */
+	}
+
+	.home_article{
+		padding-top: 20px;
+		h3 {
+			color: $clr_tertiary;
+		}
+
+		&:nth-of-type(even) {
+			background-color: lighten($clr_white, 2%);
+		}
+	}
+
+
+	a.fixed_anchor.first {
+	    top: -60px;
+	} 
+
+	.content {
+		position: relative;
+		/* padding-top: 50px; */
+		z-index: 5;
+
+		h3 {
+			margin-top: 15px;
+			margin-bottom: 15px;
+
+		}
+	}
+
+	.skills {
+		p {
+			margin-bottom: 30px;
+			line-height: 1.5em;
+		}
+	}
+
+
+	.skill_tables {
+	    width: 100%;
+	    margin-bottom: 60px;
+
+	    caption {
+	        font-size: 1.2em;
+	        margin-bottom: 10px;
+	        text-align: left;
+	    }
+
+	    thead {
+	    	background-color: $clr_secondary;
+	    	th {
+				color: $clr_white;
+				border: $clr_primary 1px solid;
+				padding: 5px 0;
+	    	}
+	    }
+
+	    tbody {
+	    	tr {
+
+				color: $clr_primary;
+
+	    		&:nth-child(even) {
+	    			background-color: $clr_highlight;
+	    		}
+
+				/* strong {
+					font-weight: normal;
+					color: $clr_black;
+				} */
+
+	    		&.highlight {
+	    			font-style: italic;
+	    			color: $clr_black;
+	    			a {
+	    				color: $clr_black;
+	    			}
+	    		}
+
+	    		&.unused {
+	    			color: $clr_tertiary;
+	    			background-color: rgba($clr_highlight, 0.4);
+	    			opacity: 0.8;
+	    			a {
+	    				color: $clr_tertiary;
+	    			}
+	    			strong {
+	    				font-weight: normal;
+	    			}
+	    		}
+
+		    	td {
+		    		padding: 6px 0 6px 6px;
+		    		border: $clr_secondary 1px solid;
+		    	}
+
+	    	}
+	    }
+
+	    a {
+	    	text-decoration: none;
+	    	color: $clr_primary;
+
+	    	&:hover {
+	    		text-decoration: underline;
+	    	}
+	    }
+	}
+
+	.experience {
+		padding-bottom: 50px;
+
+		p {
+			padding-bottom: 30px;
+		}
+	}
+
+
+	.corp_logos {
+		margin-top: 40px;
+		padding: 0 10px;
+
+		@media #{$small-up} {
+			padding: 0 140px;
+		}
+		//margin-bottom: 50px;
+
+		span {
+			display: inline-block;
+			text-indent: -99999px;
+
+			
+			&.logo_tollBros {
+			    width: 250px;
+			    height: 50px;
+			    @include iconSprite(0px, -2px);
+			}
+
+			&.logo_sap {
+			    width: 147px;
+			    height: 75px;
+			    @include iconSprite(-263px, -2px);
+			}
+
+			&.logo_ebay {
+			    width: 194px;
+			    height: 74px;
+			    @include iconSprite(-430px, -12px);
+			}
+
+			&.logo_dockers {
+			    width: 133px;
+			    height: 55px;
+			    @include iconSprite(-643px, -18px);
+			}
+
+			&.logo_bedbath {
+			    width: 148px;
+			    height: 44px;
+			    @include iconSprite(-0px, -62px);
+			}
+
+			&.logo_aero {
+				width: 221px;
+				height: 54px;
+				@include iconSprite(-164px, -88px);
+			}
+
+			&.logo_dicks {
+				width: 131px;
+				height: 63px;
+				@include iconSprite(-408px, -94px);
+			}
+
+			&.logo_ems {
+				width: 123px;
+				height: 76px;
+				@include iconSprite(-556px, -93px)
+			}
+
+			&.logo_mattel {
+				width: 109px;
+				height: 56px;
+				@include iconSprite(-686px, -101px)
+			}
+
+			&.logo_ace {
+				width: 127px;
+				height: 76px;
+				@include iconSprite(-2px, -122px);
+			}
+
+			&.logo_haggar {
+				width: 144px;
+				height: 45px;
+				@include iconSprite(-160px, -154px);
+			}
+
+			&.logo_gnc {
+				width: 120px;
+				height: 43px;
+				@include iconSprite(-337px, -167px);
+			}
+
+			&.logo_maureces {
+				width: 125px;
+				height: 55px;
+				@include iconSprite(-474px, -184px);
+			}
+
+			&.logo_irobot {
+				width: 121px;
+				height: 27px;
+				@include iconSprite(-619px, -188px);
+			}
+
+			&.logo_levis {
+				width: 149px;
+				height: 72px;
+				@include iconSprite(-2px, -214px);
+			}
+
+			&.logo_tumi {
+				width: 129px;
+				height: 42px;
+				@include iconSprite(-164px, -214px);
+			}
+
+			&.logo_pge {
+				width: 76px;
+				height: 91px;
+				@include iconSprite(-307px, -214px);
+			}
+
+			&.logo_sportchek {
+				width: 114px;
+				height: 42px;
+				@include iconSprite(-399px, -241px);
+			}
+
+			&.logo_sportauth {
+				width: 122px;
+				height: 41px;
+				@include iconSprite(-549px, -249px);
+			}
+
+
+		}
+	}
+
+
+	.aboutme {
+
+		p {
+			line-height: 1.5em;
+			margin-bottom: 15px;
+		}
+
+		h4 {
+			width: 100%;
+			text-align: center;
+			font-size: 1.4em;
+			color: $clr_primary;
+			cursor: pointer;
+			margin: 40px 0 50px 0;
+
+			.notahref {
+				text-decoration: underline;
+			}
+		}
+	}
+
+}

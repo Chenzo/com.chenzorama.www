@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://www.chenzorama.com/</loc>
+      <lastmod>2017-04-22</lastmod>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.chenzorama.com/projects</loc>
+      <lastmod>2017-04-22</lastmod>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://gaming.chenzorama.com/</loc>
+      <lastmod>2016-10-29</lastmod>
+      <priority>1.0</priority>
+   </url>
+   <!-- <url>
+      <loc>https://www.chenzorama.com/consulting</loc>
+      <lastmod>2016-02-29</lastmod>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.chenzorama.com/skills</loc>
+      <lastmod>2016-02-29</lastmod>
+      <priority>1.0</priority>
+   </url> -->
+</urlset>

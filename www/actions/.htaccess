@@ -1,0 +1,79 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+#LIVE
+RewriteBase /actions/
+
+#--------------------------------------
+#-- 404 & 500 Redirects
+#--------------------------------------
+ErrorDocument 404 /404.php
+ErrorDocument 500 /500.php
+
+#--------------------------------------
+#-- Force www before domain in URL
+#--------------------------------------
+#RewriteCond %{HTTP_HOST} ^400pas.com$
+#RewriteRule ^/?(.*)$ http://www.400pas.com/$1 [R=301,QSA,NC,NE,L]
+
+#--------------------------------------
+#--404 if a .PHP is added
+#--------------------------------------
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^(.+)\.php - [F,L]
+
+
+#--------------------------------------
+#-- Add trailing PHP and Params
+#--------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)$ $1.php?param1=$2&param2=$3&param3=$4&param4=$5 [B,QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)$ $1.php?param1=$2&param2=$3&param3=$4 [B,QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/([^/]+)$ $1.php?param1=$2&param2=$3 [B,QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+#check for the existance of a PHP file first or else the 404 won't work
+RewriteCond %{REQUEST_FILENAME}.php -f 
+RewriteRule ^([^/]+)$ $1.php?param1=$2 [B,QSA,L]
+
+RewriteRule ^(.*)/$ $1 [R=301,L]
+
+
+<ifModule mod_headers.c>
+# Turn on Expires and set default expires to 3 days
+ExpiresActive On
+ExpiresDefault A259200
+
+
+
+ 
+# Set up caching on media files for 1 month
+<filesMatch ".(ico|gif|jpg|jpeg|png|flv|pdf|swf|mov|mp3|wmv|ppt|css|js)$">
+ExpiresDefault A2419200
+Header append Cache-Control "public"
+Header unset Pragma
+Header unset ETag
+FileETag None
+</filesMatch>
+ 
+# Set up 2 Hour caching on commonly updated files
+<filesMatch ".(php|xml|txt|html|js|css)$">
+ExpiresDefault A7200
+Header append Cache-Control "private, must-revalidate"
+</filesMatch>
+
+
+
+#Gzip
+<ifmodule mod_deflate.c>
+#AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript text/javascript
+</ifmodule>
+#End Gzip

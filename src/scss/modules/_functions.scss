@@ -1,0 +1,25 @@
+
+
+
+
+@function em-calc($value, $base-value: 16) {
+
+  $value: $value / $base-value * 1em;
+  @if ($value == 0em) { $value: 0; } /* Turn 0em into 0 */
+  @return $value;
+  
+}
+
+@function lower-bound($range){
+  @if length($range) <= 0 {
+    @return 0;
+  }
+  @return nth($range,1);
+}
+
+@function upper-bound($range) {
+  @if length($range) < 2 {
+    @return 999999999999;
+  }
+  @return nth($range, 2);
+}

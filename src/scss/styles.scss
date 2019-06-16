@@ -1,0 +1,17 @@
+/*! Styles - This comment doesn't get compressed */
+
+@import "modules/all";
+
+@import "partials/reset";
+@import "partials/base";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/grid";
+
+@import "partials/contact-modal";
+@import "partials/tippytop";
+
+@import "pages/home",
+        "pages/projects",
+        "pages/sot";
+
