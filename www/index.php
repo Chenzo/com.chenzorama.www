@@ -13,21 +13,25 @@ include "includes/globals.php";
 	
 
 		<section class="dev">
-			<header>
-				<h1>CHENZORAMA</h1>
-				<h5>entirely too much chenzo</h5>
-			</header>
-			<img src="images/devIcon.png" />
-			<h3>Web Development</h3>
+			<a href="/dev">
+				<aside>
+					<h1>CHENZORAMA</h1>
+					<h5>entirely too much chenzo</h5>
+				</aside>
+				<img src="images/devIcon.png" />
+				<h3>Web Development</h3>
+			</a>
 		</section>
 
 		<section class="gaming">
-			<header>
-				<h1>CHENZORAMA</h1>
-				<h5>entirely too much chenzo</h5>
-			</header>
-			<img src="images/gamingIcon.png" />
-			<h3>Gaming</h3>
+			<a href="/sea-of-thieves">
+				<aside>
+					<h1>CHENZORAMA</h1>
+					<h5>entirely too much chenzo</h5>
+				</aside>
+				<img src="images/gamingIcon.png" />
+				<h3>Gaming</h3>
+			</a>
 		</section>
 
 
